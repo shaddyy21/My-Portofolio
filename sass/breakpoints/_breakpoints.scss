@@ -1,0 +1,77 @@
+/*===================================BreakPoints=====================================*/
+
+@media only screen and (min-width: 34em) {
+    /* Style adjustments for viewports that meet the condition */    
+    #bars{
+        display: block;
+    }
+    
+    header{
+        nav{
+            width: auto;
+        }
+          ul{
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+        }
+    
+        li{
+            flex: 1 1 auto;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto; 
+        }
+    }
+    
+    #container {
+        min-width: 34em;
+    }
+    
+    header{
+        min-width: 34em;
+    }
+    section{
+        background-color: $primary-color;
+    }
+}
+
+@media only screen and (min-width: 54em) {
+    #bars{
+        display: block;
+    }
+    
+    header{
+       
+    }
+    
+    #container {
+        min-width: 44em;
+    }
+    
+    section{
+        background-color: $primary-color;
+    }
+}
+
+@media only screen and (min-width: 74em) {
+    #bars{
+       display: none;
+    }
+    
+    header{
+        nav{
+            margin: 0;
+        }
+         h1{
+            margin-bottom: 0.50em;
+        }
+        
+        nav{
+            display: block;
+        }
+    }
+}
+
+/*===================================BreakPoints=====================================*/

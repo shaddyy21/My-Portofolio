@@ -1,0 +1,33 @@
+/*====================================Header=========================================*/
+
+header{
+    h1{
+        text-align: center;
+        margin: 10px 0 0 0;
+    }
+    
+    #bars{
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav{
+        display: none;
+        background-color: $secondary-color;
+        width: 25em;
+        margin-left: 50px;
+        margin-top: -50px;
+    }
+    
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+//    
+    li{
+        text-align: center;
+    }
+}
+
+/*====================================Header=========================================*/
+
