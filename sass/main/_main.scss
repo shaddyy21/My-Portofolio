@@ -17,8 +17,13 @@ section{
     }
 }
 
-#bbjHome {
-	width: 31.25em;
+.bbj{
+	border: thin solid red;
+    
+    #bbjHome {
+        border: thin blue solid;
+        width: 33.5em;
+    }
 }
 
 .top{
