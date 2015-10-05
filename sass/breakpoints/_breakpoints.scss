@@ -37,10 +37,10 @@
     }
     
     .bbj{
-        border: thin solid red;
+//        border: thin solid red;
         
         #bbjHome, #bbjMobile {
-            border: thin blue solid;
+//            border: thin blue solid;
             width: 21.2em;
         }
     }
@@ -62,6 +62,15 @@
     section{
         background-color: $primary-color;
     }
+    
+    .bbj{
+//        border: thin solid blue;
+        
+        #bbjHome, #bbjMobile {
+//            border: thin blue solid;
+            width: 21.2em;
+        }
+    }
 }
 
 @media only screen and (min-width: 74em) {
@@ -80,6 +89,31 @@
         nav{
             display: block;
         }
+    }
+    
+    .bbj{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+//        border: thin solid green;
+        
+        #bbjHome{
+            flex: 1 1 20%;
+            height: 35em;
+        }
+        
+        #bbjMobile {
+            flex: 1 0 10%;
+//            height: 50em;
+        }
+    }
+    
+    #bbj-info {
+//        flex: 0 0 6%;
+        border: thin red solid;
+        height: 2em;
+        
     }
 }
 

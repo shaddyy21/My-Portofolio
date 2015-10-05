@@ -18,11 +18,16 @@ section{
 }
 
 .bbj{
-	border: thin solid red;
+//	border: thin solid red;
     
-    #bbjHome, #bbjMobile {
-        border: thin blue solid;
+    #bbjHome{
         width: 16.5em;
+        margin-left: 2em;
+    }
+    
+    #bbjMobile {
+        width: 16.5em;
+        margin-left: 2em;
     }
 }
 
