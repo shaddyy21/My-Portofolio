@@ -25,15 +25,24 @@
         }
     }
     
-    #container {
-        min-width: 34em;
-    }
+//    #container {
+//        min-width: 34em;
+//    }
     
     header{
         min-width: 34em;
     }
     section{
         background-color: $primary-color;
+    }
+    
+    .bbj{
+        border: thin solid red;
+        
+        #bbjHome, #bbjMobile {
+            border: thin blue solid;
+            width: 21.2em;
+        }
     }
 }
 
