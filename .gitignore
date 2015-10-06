@@ -1,0 +1,3 @@
+*.js
+node_modules/gulp/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/redent/node_modules/strip-indent/license
+*.json
