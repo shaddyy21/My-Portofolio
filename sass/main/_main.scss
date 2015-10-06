@@ -17,30 +17,43 @@ section{
     }
 }
 
+.title {
+//    border: thin red solid;
+    height: 2em;
+    width: 10em;
+    font-size: 2.5em;
+    margin: auto;
+}
+
 .bbj{
 //	border: thin solid red;
-    
+
     #bbjHome{
-        width: 16.5em;
-        margin-left: 2em;
+        height: 16.5em;
+        margin: auto;
     }
     
     #bbjMobile {
         width: 16.5em;
-        margin-left: 2em;
+        margin-bottom: 1em;
+        border-bottom: thin red solid;
     }
 }
 
-.bbj-infos {
+.bbj-infos{
+//    display: none;
 	width: 16.5em;
-    border: green thin solid;
-    
+//    border: green thin solid;
+//    margin-top: -20em;
+    margin-left: 0.2em;
+
     p{
         width: 16.5em;
-//        word-break: normal;
-//        word-spacing:normal;
-//        word-wrap: normal;
     }
+}
+
+.endLine {
+    border: green thin solid;
 }
 
 .top{
