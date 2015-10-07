@@ -3,11 +3,11 @@
 /*=============================================================*/
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var browserSync = require('browser-sync').create();
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 //var uglify = require('gulp-uglifyjs');
-//var browserSync = require('browser-sync');
 /*=============================================================*/
 
 
@@ -34,10 +34,25 @@ gulp.task('compress', function() {
 
 
 /*=============================================================*/
+//                        Browser-Sync Tasks                   //
+/*=============================================================*/
+gulp.task('serve', ['sass'], function() {
+    browserSync.init({
+        server: "./"
+    }); 
+    gulp.watch("./scss/**/*.scss", ['sass']);
+//    gulp.watch("./*.html").on('change', browserSync.reload);
+    gulp.watch("./*.scss").on('change', browserSync.reload);
+});
+/*=============================================================*/
+
+
+/*=============================================================*/
 //                        Sass Task                            //
 /*=============================================================*/
 gulp.task('sass', function () {
   gulp.src('./sass/**/*.scss')
+    .pipe(sass())
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
@@ -45,7 +60,8 @@ gulp.task('sass', function () {
         cascade: false
     }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./css'))
+    .pipe(browserSync.stream());
 });
 /*=============================================================*/
 
@@ -58,22 +74,10 @@ gulp.task('sass:watch', function () {
 });
 /*=============================================================*/
 
-/*=============================================================*/
-//                        Browser-Sync Tasks                   //
-/*=============================================================*/
-//gulp.task('browser-sync', function() {
-//    browserSync({
-//        server: {
-//            baseDir: './app/'
-//        }
-//    });
-//});
-/*=============================================================*/
-
 
 /*=============================================================*/
 //                        Default Task                         //
 /*=============================================================*/
-gulp.task('default', ['sass']);
+gulp.task('default', ['serve']);
 /*=============================================================*/
 
